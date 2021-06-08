@@ -1,0 +1,9 @@
+.footer {
+  background-color: $secondary-dark;
+  color: white;
+  padding: $p5 0;
+
+  &__content {
+    @include container;
+  }
+}

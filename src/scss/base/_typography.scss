@@ -1,7 +1,39 @@
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: $text-dark;
+}
+
 ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+    transform: scale(1.01);
+  }
+
+  &:focus {
+    outline: 3px solid currentColor;
+    outline-offset: 5px;
+  }
+}
+
+.heading {
+  &--primary {
+    font-size: 5rem;
+    color: $primary-dark;
+    line-height: 1;
+  }
+
+  &--secondary {
+    font-size: 3.6rem;
+    color: $primary-dark;
+    line-height: 1;
+  }
 }

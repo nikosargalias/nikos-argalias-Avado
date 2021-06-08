@@ -1,0 +1,16 @@
+.hero {
+  @include container();
+  padding: $p2;
+  border-radius: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    margin-bottom: $m2;
+  }
+
+  &__body {
+    margin-bottom: $m2;
+  }
+}

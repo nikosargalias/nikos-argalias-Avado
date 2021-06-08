@@ -4,20 +4,31 @@ $p1: 1rem;
 $p2: 2rem;
 $p3: 3rem;
 $p4: 4rem;
+$p5: 5rem;
+$p6: 6rem;
+$p7: 6.8rem;
+$p10: 15rem;
 
 $m1: 1rem;
 $m2: 2rem;
 $m3: 3rem;
 $m4: 3.5rem;
+$m5: 5rem;
+$m6: 6rem;
+$m7: 7rem;
 
 $g1: 1rem;
 $g2: 2rem;
 $g3: 3rem;
 $g4: 4rem;
 
-// Color variables]
+// Color variables
 $text-dark: rgba(#343438, 1);
 $primary-dark: #453878;
+$secondary-dark: #343438;
 
 // Utility classes for preset styles -reusable across the website - following the DRY principle for clean codebase
 $box-shadow-dark: 0px 3px 6px #00000029;
+
+$transition-fast: all 0.2s;
+$transition-med: all 0.5s;

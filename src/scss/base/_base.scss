@@ -13,23 +13,20 @@ html,
   // this gives you complete custom control of the width of your elements without needing to calculate width+padding+border
 }
 
-body {
-  font-size: 1rem;
-  font-weight: 400;
-  height: 300vh;
-}
-
 img {
   max-width: 100%;
   object-fit: cover;
 }
 
+video {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
 .burger-btn {
   @include center();
-  // position: absolute;
-  // top: 50%;
-  // left: 10%;
-  // width: 34.5px;
+  z-index: 5;
+  width: 34.5px;
   height: 26px;
 
   &__lines {
@@ -78,46 +75,78 @@ img {
   }
 }
 
-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  // position: relative;
+.header {
+  // position: sticky;
+  // top: 0;
+  // left: 0;
+  // right: 0;
   background-image: url("../../assets/pngs/top-bg.png");
+  padding: $p10 0 $p5;
+  position: relative;
+  // height: 100px;
+
+  &__navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: $p5 0;
+    // margin: $m5 0;
+    z-index: 10;
+    transition: $transition-med;
+
+    &--scrolled {
+      // background: rgba(#343438, 0.8);
+      transform: translateY(-100vh);
+    }
+
+    &--visible-scrolled {
+      transform: translateY(0);
+      background: rgba(#343438, 0.8);
+    }
+  }
+
+  &__hero {
+  }
 }
 
 .navbar {
   @include container();
+  // border: blue solid 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   width: 100vh;
-  //   height: 100vw;
-  //   left: 0;
+  &__dark-overlay {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(#343438, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition-fast;
 
-  //   background: #333;
-  // }
+    &--visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }
 
 .main-nav {
   @include container();
   position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  top: 100%;
-  // border: blue 2px solid;
-  width: 100%;
-  padding: $p2;
-  margin-top: $m4;
-  border-radius: 30px;
+  top: 0;
+  margin-top: $p10;
+  padding: $p3;
+  border-radius: 20px;
   background: white;
+  transform-origin: left;
+  transform: translateX(-100vw);
+  transition: $transition-fast;
 
   &__list {
     display: grid;
@@ -128,7 +157,6 @@ header {
 
   &__item {
     @include center();
-    // border: blue 2px solid;
 
     // Selects the last two item elements.
     &:nth-last-of-type(2),
@@ -154,5 +182,9 @@ header {
   &__icon {
     padding: 0;
     margin: 0;
+  }
+
+  &--visible {
+    transform: translateX(0);
   }
 }
