@@ -27,6 +27,13 @@ module.exports = {
         test: /\.html$/i,
         loader: "html-loader",
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset",
+        generator: {
+          filename: "assets/imgs/[hash][ext][query]",
+        },
+      },
     ],
   },
 };

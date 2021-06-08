@@ -1,0 +1,158 @@
+html {
+  font-size: 62.5%;
+  // This makes 1rem = 10px, making it easier to set exact pizel sizes with responsive units when needed.
+}
+
+html,
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // this gives you complete custom control of the width of your elements without needing to calculate width+padding+border
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  height: 300vh;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.burger-btn {
+  @include center();
+  // position: absolute;
+  // top: 50%;
+  // left: 10%;
+  // width: 34.5px;
+  height: 26px;
+
+  &__lines {
+    display: block;
+    width: 34.5px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.2s;
+    // this transition is here so that when the menu is closed, the middle line's bg color changes over .2s. We only want this to happen when the menu closes, hence why this property is essentially dissables in the .open class below.
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 34.5px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      transform: translateY(-10px);
+    }
+
+    &::after {
+      transform: translateY(10px);
+    }
+  }
+
+  &:hover > &__lines {
+    width: 24.4px;
+    background: transparent;
+
+    // This transition is here so that the background of the middle line becomes transparent immediately.
+    transition: none;
+
+    &::before {
+      width: 24.4px;
+      transform: translateY(0) rotate(135deg);
+    }
+
+    &::after {
+      width: 24.4px;
+      transform: translateY(0) rotate(-135deg);
+    }
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  // position: relative;
+  background-image: url("../../assets/pngs/top-bg.png");
+}
+
+.navbar {
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   width: 100vh;
+  //   height: 100vw;
+  //   left: 0;
+
+  //   background: #333;
+  // }
+}
+
+.main-nav {
+  @include container();
+  position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  top: 100%;
+  // border: blue 2px solid;
+  width: 100%;
+  padding: $p2;
+  margin-top: $m4;
+  border-radius: 30px;
+  background: white;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
+    gap: $g3;
+  }
+
+  &__item {
+    @include center();
+    // border: blue 2px solid;
+
+    // Selects the last two item elements.
+    &:nth-last-of-type(2),
+    &:last-of-type {
+      grid-column: 1 / -1;
+    }
+
+    &:last-of-type {
+      margin-top: 10rem;
+      align-self: stretch;
+    }
+  }
+
+  &__link {
+    @include center();
+    flex-direction: column;
+    font-size: 1.8rem;
+    color: $text-dark;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  &__icon {
+    padding: 0;
+    margin: 0;
+  }
+}
