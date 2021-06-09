@@ -38,6 +38,7 @@
 
   // Set's default hight of mobile navigation
   height: 635px;
+  min-height: 400px;
 
   // set's max height (this makes it responsive if the viewport is shorter than the height set above.
   max-height: calc(100vh - (#{$g-section-xl} + 1rem));
@@ -45,6 +46,7 @@
   @include media(tablet-l) {
     margin-top: $g-section-xl;
     height: initial;
+    min-height: initial;
   }
 
   &__list {

@@ -1,12 +1,15 @@
 .main-content {
   @include container;
-  padding-bottom: $g-section;
   position: relative;
+
+  // We are using padding instead of margin for the spacing in the bottom in order to be able to absolutely position the 'main-content__go-to-top' button on the bottom right in large viewports
+  padding-bottom: $g-section;
 
   &--mg-section-top {
     margin-top: $g-section-l;
   }
 
+  // adds margin-bottom to every direct child except the last one, as the spacing from one section to the next is controlled on the block level with the padding above.
   & > :not(:last-child) {
     margin-bottom: $g-elem;
   }
@@ -18,20 +21,34 @@
   &__icons {
     display: grid;
     grid-auto-flow: column;
-    align-items: center;
     column-gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
+    align-items: center;
+
+    // 500px is the max width of the image in the mock up that was sent via adobeXD
+    width: 100%;
 
     &--single {
-      @extend .main-content__icons;
-      justify-items: center;
+      // justify-items: center;
+
+      // based on the design that was provided, there was exactly 70px of space between this image and the heading below it, hence why this property decleration overwrites the default element spacing which is set on line 14.
+      margin-bottom: $g-elem-xl !important;
     }
 
     &--double {
-      @extend .main-content__icons;
       justify-content: space-between;
+      max-width: 400px;
+      margin: 0 auto;
+
+      @include media(mobile-xl) {
+        // justify-content: space-around;
+      }
     }
+  }
+
+  &__icon {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   &__go-to-top {
@@ -55,15 +72,16 @@
     justify-content: space-between;
     align-items: center;
 
-    & > :not(:last-child) {
-      margin: 0;
+    // Reseting bottom margins as elements are now stacked in a row
+    & > * {
+      margin: 0 !important;
     }
 
     &__icons {
       flex-basis: 50%;
 
-      &--double {
-        justify-content: space-around;
+      &--single {
+        margin-right: 5rem !important;
       }
     }
 
@@ -74,7 +92,7 @@
     &__go-to-top {
       display: block;
       position: absolute;
-      bottom: 10%;
+      bottom: 5%;
       transform: translateX(45vw);
       transition: none;
 
@@ -83,10 +101,10 @@
         animation: bounce-transform-right 1s ease-in-out infinite forwards;
       }
     }
-  }
 
-  //   last .main-content section requires column direction
-  &:last-of-type {
-    flex-direction: column;
+    // last .main-content section requires column direction
+    &:last-of-type {
+      flex-direction: column;
+    }
   }
 }

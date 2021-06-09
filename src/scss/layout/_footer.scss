@@ -1,10 +1,12 @@
 .footer {
+  text-align: center;
   color: white;
   background-color: $secondary-dark;
-  padding: $g-section 0;
+  padding: $g-section-md 0;
 
   @include media(tablet-l) {
-    padding: $g-section-l 0;
+    text-align: start;
+    padding: $g-section-ml 0;
   }
 
   &__content {

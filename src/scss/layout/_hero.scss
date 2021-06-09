@@ -1,16 +1,3 @@
-.hero-container {
-  // background: url("../../assets/body-svgs/Emblem.png") no-repeat center left,
-  //   url("../../assets/pngs/top-bg.png") repeat center;
-  // background-size: auto, cover;
-
-  // @include media(tablet-l) {
-  //   background-position: center right, center;
-  //   background-size: auto, contain;
-  // }
-
-  // padding: $g-section-xl 0 $g-section;
-}
-
 .hero {
   background: url("../../assets/body-svgs/Emblem.png") no-repeat center left,
     url("../../assets/pngs/top-bg.png") repeat center;
@@ -25,7 +12,7 @@
 
   &__container {
     @include container();
-    padding: $g-elem;
+    padding: $g-elem $g-elem-sm;
     border-radius: 20px;
     background: white;
     display: flex;
@@ -43,6 +30,7 @@
 
   @include media(tablet-l) {
     &__container {
+      padding: $g-elem-ml;
       flex-direction: row;
     }
 

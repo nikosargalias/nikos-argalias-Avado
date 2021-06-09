@@ -15,8 +15,9 @@ html,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
   // this gives you complete custom control of the width of your elements without needing to calculate width+padding+border
+  box-sizing: border-box;
 }
 
 body {
@@ -30,9 +31,10 @@ img {
 }
 
 button {
+  font-family: inherit;
+  font-size: inherit;
   color: inherit;
   border: inherit;
   outline: inherit;
-  font-size: inherit;
   background: inherit;
 }

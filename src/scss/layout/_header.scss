@@ -1,14 +1,4 @@
 .header {
-  //   background: url("../../assets/body-svgs/Emblem.png") no-repeat center left,
-  //     url("../../assets/pngs/top-bg.png") repeat center;
-  //   background-size: auto, cover;
-
-  //   @include media(tablet-l) {
-  //     background-position: center right, center;
-  //     background-size: auto, contain;
-  //   }
-
-  //   padding: $g-section-xl 0 $g-section;
   position: relative;
 
   &__navbar {
@@ -20,10 +10,12 @@
     z-index: 10;
     transition: $transition-med;
 
+    // This class is applied by javascript when user scrolls down in mobile view
     &--hide {
       transform: translateY(-200px);
     }
 
+    // This class is applied by javascript when user scrolls up (and isn't scrolled to the very top) in mobile view
     &--visible-scrolled {
       transform: translateY(0);
       background: rgba(#343438, 0.8);
@@ -32,9 +24,5 @@
     @include media(tablet-l) {
       padding: 0;
     }
-  }
-
-  @include media(tablet-l) {
-    // padding: $g-section-xl 0 $g-section-l;
   }
 }

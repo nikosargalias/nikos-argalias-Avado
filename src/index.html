@@ -8,6 +8,7 @@
     <title>Avado Test Site</title>
   </head>
   <body>
+    
     <header class="header">
 
       <!-- navbar = entire navbar -->
@@ -15,7 +16,7 @@
         <div class="navbar">
 
           <!-- This is the burger button on mobile view (hidden in largre viewports) -->
-          <div id="burger-btn" class="burger-btn">
+          <div id="burger-btn" class="burger-btn" tabindex="0" aria-label="Main menu" role="button" aria-expanded="false">
             <span class="burger-btn__lines"></span>
           </div>
 
@@ -23,7 +24,7 @@
           <div id="navbar__dark-overlay" class="navbar__dark-overlay"></div>
 
         <!-- main-nav icons (pop out in mobile view, hidden in largre viewport -->
-          <nav id="main-nav" class="main-nav">
+          <nav id="main-nav" class="main-nav" aria-label="Main menu">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--home">
                 <a href="#" class="main-nav__link"
@@ -96,35 +97,35 @@
       </div>
     </header>
 
-      <main>
-      <!-- <div class="hero - section with video"> -->
-        <section class="hero">
-          <div class="hero__container">
-            <div class="hero__text">
-              <h1 class="hero__heading heading--primary">Lorem Ipsum</h1>
-              <p class="hero__body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-            <div class="hero__video video">
-              <video id="video" class="">
-                <source src="./assets/videos/video.webm" type="video/webm" />
-  
-                <source src="./assets/videos/video-720.mp4" type="video/mp4" />
-  
-                Sorry, your browser doesn't support embedded videos.
-              </video>
-              <!-- img below is the vustom video play btn -->
-              <img id="video-btn" src="./assets/body-svgs/btn-play.svg" alt="" class="video__btn"></img>
-            </div>
+    <main>
+      <!-- "hero - section with video"> -->
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__text">
+            <h1 class="hero__heading heading--primary">Lorem Ipsum</h1>
+            <p class="hero__body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
           </div>
-        </section>
+          <div class="hero__video video">
+            <video id="video" class="">
+              <source src="./assets/videos/video.webm" type="video/webm" />
+
+              <source src="./assets/videos/video-720.mp4" type="video/mp4" />
+
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+            <!-- img below is the vustom video play btn -->
+            <img tabindex id="video-btn" src="./assets/body-svgs/btn-play.svg" alt="" class="video__btn"></img>
+          </div>
+        </div>
+      </section>
   
 
- 
+      <!-- main content 1 with added margin on top and two icons -->
       <section class="main-content main-content--mg-section-top">
         <div class="main-content__text">
           <h2 class="main-content__heading heading--secondary">Lorem Ipsum</h2>
@@ -138,7 +139,7 @@
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-        <div class="main-content__icons--double">
+        <div class="main-content__icons main-content__icons--double">
           <img
             src="./assets/body-svgs/Handshake.svg"
             alt=""
@@ -151,8 +152,10 @@
           />
         </div>
       </section>
+
+        <!-- Main content 2 with person image -->
       <section class="main-content">
-        <div class="main-content__icons--single">
+        <div class="main-content__icons main-content__icons--single">
           <img
             src="./assets/body-svgs/Component 24 – 2.svg"
             alt=""
@@ -172,6 +175,8 @@
           </p>
         </div>
       </section>
+
+      <!-- Main content 3 with go to top button -->
       <section class="main-content">
         <div class="main-content__text">
           <h2 class="main-content__heading heading--secondary">Lorem Ipsum</h2>

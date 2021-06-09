@@ -4,6 +4,11 @@
   width: 34.5px;
   height: 26px;
 
+  &:focus {
+    outline: 2px white solid;
+    outline-offset: 5px;
+  }
+
   &__lines {
     display: block;
     width: 34.5px;
