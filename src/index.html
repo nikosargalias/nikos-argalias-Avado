@@ -18,6 +18,14 @@
 
           <nav id="main-nav" class="main-nav">
             <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--home">
+                <a href="#" class="main-nav__link"
+                  ><img
+                    src="./assets/menu-svgs/btn-home.svg"
+                    alt=""
+                    class="main-nav__icon"
+                /></a>
+              </li>
               <li class="main-nav__item">
                 <a href="#" class="main-nav__link"
                   ><img
@@ -68,10 +76,10 @@
                   Lorem Ipsum</a
                 >
               </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link btn btn--outline"
-                  >PDF Version</a
-                >
+              <li class="main-nav__item main-nav__item--btn">
+                <button id="print-btn" class="main-nav__link btn btn--outline">
+                  PDF Version
+                </button>
               </li>
             </ul>
           </nav>
@@ -81,23 +89,19 @@
       </div>
       <div class="header__hero">
         <div class="hero">
-          <h1 class="hero__heading heading--primary">Lorem Ipsum</h1>
-          <p class="hero__body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-          <video class="video" controls>
-            <source
-              src="https://www.youtube.com/watch?v=8s0GudJi5g4"
-              type="video/webm"
-            />
+          <div class="hero__text">
+            <h1 class="hero__heading heading--primary">Lorem Ipsum</h1>
+            <p class="hero__body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <video class="hero__video video" controls>
+            <source src="./assets/video.webm" type="video/webm" />
 
-            <source
-              src="https://www.youtube.com/watch?v=8s0GudJi5g4"
-              type="video/mp4"
-            />
+            <source src="./assets/video-720.mp4" type="video/mp4" />
 
             Sorry, your browser doesn't support embedded videos.
           </video>
@@ -107,17 +111,19 @@
 
     <main>
       <section class="main-content">
-        <h2 class="main-content__heading heading--secondary">Lorem Ipsum</h2>
-        <p class="main-content__paragraph body">
-          Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <div class="main-content__icons">
+        <div class="main-content__text">
+          <h2 class="main-content__heading heading--secondary">Lorem Ipsum</h2>
+          <p class="main-content__paragraph body">
+            Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <div class="main-content__icons--double">
           <img
             src="./assets/body-svgs/Handshake.svg"
             alt=""
@@ -128,45 +134,62 @@
             alt=""
             class="main-content__icon"
           />
+        </div>
+      </section>
+      <section class="main-content">
+        <div class="main-content__icons--single">
           <img
             src="./assets/body-svgs/Component 24 – 2.svg"
             alt=""
             class="main-content__icon"
           />
         </div>
+        <div class="main-content__text">
+          <h2 class="main-content__heading heading--secondary">Lorem Ipsum</h2>
+          <p class="main-content__paragraph body">
+            Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
       </section>
       <section class="main-content">
-        <h2 class="main-content__heading heading--secondary">Lorem Ipsum</h2>
-        <p class="main-content__paragraph body">
-          Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </section>
-      <section class="main-content">
-        <h2 class="main-content__heading heading--secondary">Lorem Ipsum</h2>
-        <p class="main-content__paragraph body">
-          Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <picture class="main-content__top">
+        <div class="main-content__text">
+          <h2 class="main-content__heading heading--secondary">Lorem Ipsum</h2>
+          <p class="main-content__paragraph body">
+            Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <a class="main-content__go-to-top" href="#">
+          <img
+            srcset="
+              ./assets/pngs/btn-goto-top.png    1x,
+              ./assets/pngs/btn-goto-top@2x.png 2x
+            "
+            src="./assets/pngs/btn-goto-top@2x.png"
+            alt="Go to top of page"
+          />
+        </a>
+
+        <!-- <picture class="main-content__top">
           <source
             srcset="
               ./assets/pngs/btn-goto-top.png    1x,
               ./assets/pngs/btn-goto-top@2x.png 2x
             "
           />
-          <img src="./assets/pngs/btn-goto-top.png" alt="" />
-        </picture>
+          <img src="./assets/pngs/btn-goto-top@2x.png" alt="" />
+        </picture> -->
       </section>
     </main>
 

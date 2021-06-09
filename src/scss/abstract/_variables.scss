@@ -26,9 +26,18 @@ $g4: 4rem;
 $text-dark: rgba(#343438, 1);
 $primary-dark: #453878;
 $secondary-dark: #343438;
+$light: white;
 
 // Utility classes for preset styles -reusable across the website - following the DRY principle for clean codebase
 $box-shadow-dark: 0px 3px 6px #00000029;
 
 $transition-fast: all 0.2s;
-$transition-med: all 0.5s;
+$transition-med: all 1s;
+
+$g-elem-sm: 3rem;
+$g-elem: 3rem;
+$g-elem-bg: 4rem;
+$g-section-sm: 4rem;
+$g-section: 6.5rem;
+$g-section-l: 10rem;
+$g-section-xl: 15rem;

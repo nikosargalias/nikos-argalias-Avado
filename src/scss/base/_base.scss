@@ -1,6 +1,7 @@
 html {
   font-size: 62.5%;
   // This makes 1rem = 10px, making it easier to set exact pizel sizes with responsive units when needed.
+  scroll-behavior: smooth;
 }
 
 html,
@@ -19,71 +20,17 @@ img {
 }
 
 video {
+  min-width: 0;
   max-width: 100%;
+  object-fit: contain;
   border-radius: 10px;
 }
 
-.burger-btn {
-  @include center();
-  z-index: 5;
-  width: 34.5px;
-  height: 26px;
-
-  &__lines {
-    display: block;
-    width: 34.5px;
-    height: 3px;
-    background-color: white;
-    transition: all 0.2s;
-    // this transition is here so that when the menu is closed, the middle line's bg color changes over .2s. We only want this to happen when the menu closes, hence why this property is essentially dissables in the .open class below.
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 34.5px;
-      height: 3px;
-      background-color: white;
-      transition: all 0.2s;
-    }
-
-    &::before {
-      transform: translateY(-10px);
-    }
-
-    &::after {
-      transform: translateY(10px);
-    }
-  }
-
-  &:hover > &__lines {
-    width: 24.4px;
-    background: transparent;
-
-    // This transition is here so that the background of the middle line becomes transparent immediately.
-    transition: none;
-
-    &::before {
-      width: 24.4px;
-      transform: translateY(0) rotate(135deg);
-    }
-
-    &::after {
-      width: 24.4px;
-      transform: translateY(0) rotate(-135deg);
-    }
-  }
-}
-
 .header {
-  // position: sticky;
-  // top: 0;
-  // left: 0;
-  // right: 0;
   background-image: url("../../assets/pngs/top-bg.png");
-  padding: $p10 0 $p5;
+  background-size: contain;
+  padding: $p10 0 $g-section;
   position: relative;
-  // height: 100px;
 
   &__navbar {
     position: fixed;
@@ -91,100 +38,27 @@ video {
     left: 0;
     width: 100%;
     padding: $p5 0;
-    // margin: $m5 0;
     z-index: 10;
     transition: $transition-med;
 
-    &--scrolled {
-      // background: rgba(#343438, 0.8);
-      transform: translateY(-100vh);
+    &--hide {
+      transform: translateY(-200px);
     }
 
     &--visible-scrolled {
       transform: translateY(0);
       background: rgba(#343438, 0.8);
     }
+
+    @media (min-width: 900px) {
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 900px) {
+    padding: $g-section-xl 0 $g-section-l;
   }
 
   &__hero {
-  }
-}
-
-.navbar {
-  @include container();
-  // border: blue solid 1px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &__dark-overlay {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(#343438, 0.8);
-    visibility: hidden;
-    opacity: 0;
-    transition: $transition-fast;
-
-    &--visible {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-}
-
-.main-nav {
-  @include container();
-  position: absolute;
-  top: 0;
-  margin-top: $p10;
-  padding: $p3;
-  border-radius: 20px;
-  background: white;
-  transform-origin: left;
-  transform: translateX(-100vw);
-  transition: $transition-fast;
-
-  &__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
-    gap: $g3;
-  }
-
-  &__item {
-    @include center();
-
-    // Selects the last two item elements.
-    &:nth-last-of-type(2),
-    &:last-of-type {
-      grid-column: 1 / -1;
-    }
-
-    &:last-of-type {
-      margin-top: 10rem;
-      align-self: stretch;
-    }
-  }
-
-  &__link {
-    @include center();
-    flex-direction: column;
-    font-size: 1.8rem;
-    color: $text-dark;
-    font-weight: 600;
-    width: 100%;
-  }
-
-  &__icon {
-    padding: 0;
-    margin: 0;
-  }
-
-  &--visible {
-    transform: translateX(0);
   }
 }

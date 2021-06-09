@@ -13,4 +13,21 @@
   &__body {
     margin-bottom: $m2;
   }
+
+  @media (min-width: 900px) {
+    flex-direction: row;
+
+    &__video {
+      flex-basis: 55%;
+    }
+
+    &__text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: start;
+      flex-basis: 45%;
+      margin-right: 4rem;
+    }
+  }
 }

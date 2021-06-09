@@ -1,0 +1,144 @@
+.navbar {
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //   height: 100px;
+
+  &__dark-overlay {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba($secondary-dark, 0.9);
+    visibility: hidden;
+    opacity: 0;
+    transition: $transition-fast;
+
+    &--visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.main-nav {
+  @include container();
+  position: absolute;
+  top: 0;
+  margin-top: $p10;
+  padding: $g-elem;
+  border-radius: 20px;
+  background: $light;
+  transform-origin: left;
+  transform: translateX(-100vw);
+  transition: $transition-fast;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    gap: $g-elem;
+  }
+
+  &__item {
+    @include center();
+
+    // Selects the last two item elements.
+    &:nth-last-of-type(2),
+    &--btn {
+      grid-column: 1 / -1;
+    }
+
+    &--btn {
+      margin-top: 10rem;
+      align-self: stretch;
+    }
+
+    &--home {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include center();
+    flex-direction: column;
+    color: $text-dark;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+
+    & img {
+      height: 75px;
+    }
+
+    &:hover,
+    & img:hover {
+      opacity: 0.9;
+      transform: scale(1.01);
+      cursor: pointer;
+    }
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  &--visible {
+    transform: translateX(0);
+  }
+
+  @media (min-width: 900px) {
+    position: relative;
+    transform: translateX(0);
+    margin: 0 $g-elem-sm 0 0;
+    padding: $g-section-sm 0;
+    background-color: transparent;
+    max-width: 100%;
+
+    &__list {
+      gap: 0;
+      // gap on flex is not fully supported, so initialise it and use padding/margin for spacing below.
+
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      justify-content: space-between;
+
+      & :not(:first-child):not(:last-child) {
+        width: 100%;
+        border-right: 1px solid $light;
+        height: 60px;
+      }
+    }
+
+    &__item {
+      &:not(:last-child) > a {
+        font-size: 0;
+        color: transparent;
+      }
+
+      &--btn {
+        margin: 0;
+        margin-right: 4rem;
+        order: -1;
+        min-width: max-content;
+      }
+
+      &--home {
+        display: initial;
+        margin-right: 2rem;
+        order: -2;
+      }
+    }
+
+    &__link {
+      width: max-content;
+      & img {
+        height: 51px;
+        object-fit: contain;
+      }
+    }
+  }
+}

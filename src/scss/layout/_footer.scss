@@ -1,7 +1,11 @@
 .footer {
   background-color: $secondary-dark;
   color: white;
-  padding: $p5 0;
+  padding: $g-section 0;
+
+  @media (min-width: 900px) {
+    padding: $g-section-l 0;
+  }
 
   &__content {
     @include container;

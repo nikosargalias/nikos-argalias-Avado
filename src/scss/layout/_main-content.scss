@@ -1,50 +1,90 @@
 .main-content:first-of-type {
-  margin-top: $m7;
+  margin-top: $g-section-l;
 }
-// .main-content:last-of-type {
-//   margin-bottom: $m7;
-// }
 
 .main-content {
   @include container;
-  padding-bottom: $p7;
+  padding-bottom: $g-section;
+  position: relative;
 
-  //   The following adds margin to every child element of main-content
-  & :nth-child(1n) {
-    margin-bottom: $m4;
+  & > :not(:last-child) {
+    margin-bottom: $g-elem-bg;
   }
 
-  //   The following removes margin from the last element
-  & :last-child {
-    margin: 0;
+  &__heading {
+    margin-bottom: $g-elem-bg;
   }
 
   &__icons {
     display: grid;
-    grid-template-areas:
-      "handshake heart"
-      "person person";
+    grid-auto-flow: column;
     align-items: center;
-    justify-items: center;
-    row-gap: $m7;
-  }
+    column-gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
 
-  &__icon {
-    &:first-of-type {
-      grid-area: handshake;
+    &--single {
+      @extend .main-content__icons;
+      justify-items: center;
     }
 
-    &:nth-of-type(2) {
-      grid-area: heart;
-    }
-
-    &:last-of-type {
-      grid-area: person;
+    &--double {
+      @extend .main-content__icons;
+      justify-content: space-between;
     }
   }
 
-  &__top {
+  &__go-to-top {
+    margin-top: $g-section;
     display: flex;
     justify-content: center;
+    transition: $transition-fast;
+
+    &:hover {
+      animation: bounce 1s ease-in-out infinite forwards;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  @media (min-width: 900px) {
+    padding-bottom: $g-section-l;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > :not(:last-child) {
+      margin: 0;
+    }
+
+    &__icons {
+      flex-basis: 50%;
+
+      &--double {
+        justify-content: space-around;
+      }
+    }
+
+    &__text {
+      flex-basis: 50%;
+    }
+
+    &__go-to-top {
+      display: block;
+      position: absolute;
+      bottom: 10%;
+      transform: translateX(45vw);
+
+      &:hover {
+        animation: bounce-transform-right 1s ease-in-out infinite forwards;
+      }
+    }
+  }
+
+  //   last .main-content section requires column direction
+  &:last-of-type {
+    flex-direction: column;
   }
 }
