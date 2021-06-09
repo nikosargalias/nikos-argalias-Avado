@@ -76,8 +76,10 @@
       position: absolute;
       bottom: 10%;
       transform: translateX(45vw);
+      transition: none;
 
       &:hover {
+        transform: translateX(45vw);
         animation: bounce-transform-right 1s ease-in-out infinite forwards;
       }
     }

@@ -1,7 +1,6 @@
-
 .footer {
-  background-color: $secondary-dark;
   color: white;
+  background-color: $secondary-dark;
   padding: $g-section 0;
 
   @include media(tablet-l) {

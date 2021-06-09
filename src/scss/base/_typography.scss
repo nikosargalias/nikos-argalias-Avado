@@ -1,10 +1,4 @@
-// @font-face {
-//   font-family: "fieldwork-geo";
-//   src: url("../../assets/fonts/FontsFree-Net-Fieldwork-Geo-Fat-Demo.ttf")
-//       format("truetype"),
-//     url("../../assets/fonts/Fieldwork-Hum-Hair-Demo\ 265.otf") format("otf");
-// }
-
+// This file contains all the base typography styles being used in this project.
 body {
   font-family: fieldwork, sans-serif;
   font-size: 1.6rem;
@@ -13,10 +7,22 @@ body {
   color: $text-dark;
 }
 
+// setting color to inherit from parent element. Allows for BEM's method of parent styling child.
+p,
+ul,
+li,
+a,
+div,
+span {
+  color: inherit;
+}
+
+// reseting list styles
 ul {
   list-style: none;
 }
 
+// reseting link styles
 a {
   text-decoration: none;
 
@@ -32,6 +38,7 @@ a {
   }
 }
 
+// the purpose for styling a .heading class instead of h1-h6 tags is so that the heading styles can be applied to elements other than h1-h6, this makes the use of semantic html tags easier without worrying about font styles which are uniques to certain tags.
 .heading {
   &--primary {
     font-size: 5rem;

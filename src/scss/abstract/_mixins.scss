@@ -1,15 +1,18 @@
+// mixin used to verticall and horizontally center children of an element.
 @mixin center() {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+// mixin which is used on every section to limit the width and horizontally center it.
 @mixin container() {
   width: 1072px;
   max-width: 85vw;
   margin: 0 auto;
 }
 
+// mixin for easy media query use
 @mixin media($viewport) {
   @media screen and (min-width: map-get($breakpoints, $viewport)) {
     @content;
