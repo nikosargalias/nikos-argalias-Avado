@@ -1,10 +1,9 @@
-
 window.addEventListener("DOMContentLoaded", (event) => {
   const navbar = document.getElementById("header__navbar");
   const mainNav = document.getElementById("main-nav");
   const bgOverlay = document.getElementById("navbar__dark-overlay");
 
-  //   in the following function i'm using closure to store the lastScrollPosition. I'm also using a IIFE to invoke the function immediately (priot to the first call from the scroll event handler)
+  // Callback to add or hide a dark background on the navbar based on scroll position: In the following function I'm using closure to store the lastScrollPosition, then using a IIFE to invoke the function immediately (prior to the first call from the scroll event handler)
   const addNavBgColor = (function () {
     let lastScrollPos = window.scrollY;
 
@@ -32,7 +31,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
     };
   })();
-
 
   window.onscroll = addNavBgColor;
 });

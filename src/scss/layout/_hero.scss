@@ -1,11 +1,37 @@
+.hero-container {
+  // background: url("../../assets/body-svgs/Emblem.png") no-repeat center left,
+  //   url("../../assets/pngs/top-bg.png") repeat center;
+  // background-size: auto, cover;
+
+  // @include media(tablet-l) {
+  //   background-position: center right, center;
+  //   background-size: auto, contain;
+  // }
+
+  // padding: $g-section-xl 0 $g-section;
+}
+
 .hero {
-  @include container();
-  padding: $g-elem;
-  border-radius: 20px;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  box-shadow: $box-shadow-dark;
+  background: url("../../assets/body-svgs/Emblem.png") no-repeat center left,
+    url("../../assets/pngs/top-bg.png") repeat center;
+  background-size: auto, cover;
+
+  @include media(tablet-l) {
+    background-position: center right, center;
+    background-size: auto, contain;
+  }
+
+  padding: $g-section-xl 0 $g-section;
+
+  &__container {
+    @include container();
+    padding: $g-elem;
+    border-radius: 20px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: $box-shadow-dark;
+  }
 
   &__heading {
     margin-bottom: $g-elem;
@@ -16,7 +42,9 @@
   }
 
   @include media(tablet-l) {
-    flex-direction: row;
+    &__container {
+      flex-direction: row;
+    }
 
     &__video {
       flex-basis: 55%;

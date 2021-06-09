@@ -10,14 +10,19 @@
   <body>
     <header class="header">
 
+      <!-- navbar = entire navbar -->
       <div id="header__navbar" class="header__navbar">
         <div class="navbar">
+
+          <!-- This is the burger button on mobile view (hidden in largre viewports) -->
           <div id="burger-btn" class="burger-btn">
             <span class="burger-btn__lines"></span>
           </div>
 
+          <!-- Dark Overlay (hidden in largre viewports) -->
           <div id="navbar__dark-overlay" class="navbar__dark-overlay"></div>
 
+        <!-- main-nav icons (pop out in mobile view, hidden in largre viewport -->
           <nav id="main-nav" class="main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--home">
@@ -89,34 +94,38 @@
           <img src="./assets/logo/Logo.svg" alt="" class="navbar__logo logo" />
         </div>
       </div>
-      
-      <div class="header__hero">
-        <div class="hero">
-          <div class="hero__text">
-            <h1 class="hero__heading heading--primary">Lorem Ipsum</h1>
-            <p class="hero__body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-          <div class="hero__video video">
-            <video id="video" class="">
-              <source src="./assets/videos/video.webm" type="video/webm" />
-
-              <source src="./assets/videos/video-720.mp4" type="video/mp4" />
-
-              Sorry, your browser doesn't support embedded videos.
-            </video>
-            <img id="video-btn" src="./assets/body-svgs/btn-play.svg" alt="" class="video__btn"></img>
-          </div>
-        </div>
-      </div>
     </header>
 
-    <main>
-      <section class="main-content">
+      <main>
+      <!-- <div class="hero - section with video"> -->
+        <section class="hero">
+          <div class="hero__container">
+            <div class="hero__text">
+              <h1 class="hero__heading heading--primary">Lorem Ipsum</h1>
+              <p class="hero__body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+            <div class="hero__video video">
+              <video id="video" class="">
+                <source src="./assets/videos/video.webm" type="video/webm" />
+  
+                <source src="./assets/videos/video-720.mp4" type="video/mp4" />
+  
+                Sorry, your browser doesn't support embedded videos.
+              </video>
+              <!-- img below is the vustom video play btn -->
+              <img id="video-btn" src="./assets/body-svgs/btn-play.svg" alt="" class="video__btn"></img>
+            </div>
+          </div>
+        </section>
+  
+
+ 
+      <section class="main-content main-content--mg-section-top">
         <div class="main-content__text">
           <h2 class="main-content__heading heading--secondary">Lorem Ipsum</h2>
           <p class="main-content__paragraph body">

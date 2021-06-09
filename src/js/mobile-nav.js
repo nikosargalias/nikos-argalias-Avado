@@ -1,4 +1,4 @@
-import { mediaQueries } from "./media-query";
+import mediaQ from "./media-query";
 
 window.addEventListener("DOMContentLoaded", (event) => {
   const burgerBtn = document.getElementById("burger-btn");
@@ -8,14 +8,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
   burgerBtn.onclick = showNavMenu;
   window.onresize = closeMobileMenu;
 
+  // Makes main-nav visible when burger button is clicked on mobile view
   function showNavMenu() {
     burgerBtn.classList.toggle("burger-btn--open");
     mainNav.classList.toggle("main-nav--visible");
     overlay.classList.toggle("navbar__dark-overlay--visible");
   }
 
+  // Incase main-nav is open when viewport is resized, it removes all classes which make mobile menu visible if custom media query function returns.
   function closeMobileMenu() {
-    if (mediaQueries.tabletL.matches) {
+    if (mediaQ("tabletL")) {
       overlay.classList.remove("navbar__dark-overlay--visible");
       burgerBtn.classList.remove("burger-btn--open");
       mainNav.classList.remove("main-nav--visible");

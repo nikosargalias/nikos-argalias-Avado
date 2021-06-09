@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
 
+  // This classes is enabled/disables with javascript and adds the dark background to navbar when scrolling
   &__dark-overlay {
     content: "";
     position: absolute;
@@ -27,16 +28,19 @@
   @include container();
   position: absolute;
   top: 0;
-  // bottom: 0;
-  margin-top: $g-section-l;
-  padding: $g-elem;
+  margin-top: $g-section-xl;
+  padding: $g-elem-sm;
   border-radius: 20px;
   background: $light;
   transform-origin: left;
   transform: translateX(-100vw);
   transition: $transition-fast;
-  // height: 100%;
-  height: calc(100vh - (#{$g-section-l} + 1rem));
+
+  // Set's default hight of mobile navigation
+  height: 635px;
+
+  // set's max height (this makes it responsive if the viewport is shorter than the height set above.
+  max-height: calc(100vh - (#{$g-section-xl} + 1rem));
 
   @include media(tablet-l) {
     margin-top: $g-section-xl;
@@ -47,10 +51,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(min-content, 1fr));
-    // justify-content: space-between;
-    // align-content: space-between;
     gap: 1rem;
-    // gap: $g-elem;
   }
 
   &__item {
@@ -72,6 +73,7 @@
       }
     }
 
+    // Hides the home icon only visible on large viewports
     &--home {
       display: none;
     }

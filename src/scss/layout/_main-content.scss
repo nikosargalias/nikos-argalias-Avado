@@ -1,11 +1,11 @@
-.main-content:first-of-type {
-  margin-top: $g-section-l;
-}
-
 .main-content {
   @include container;
   padding-bottom: $g-section;
   position: relative;
+
+  &--mg-section-top {
+    margin-top: $g-section-l;
+  }
 
   & > :not(:last-child) {
     margin-bottom: $g-elem;

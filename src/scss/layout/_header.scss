@@ -1,14 +1,14 @@
 .header {
-  background: url("../../assets/body-svgs/Emblem.png") no-repeat center left,
-    url("../../assets/pngs/top-bg.png") repeat center;
-  background-size: auto, cover;
+  //   background: url("../../assets/body-svgs/Emblem.png") no-repeat center left,
+  //     url("../../assets/pngs/top-bg.png") repeat center;
+  //   background-size: auto, cover;
 
-  @include media(tablet-l) {
-    background-position: center right, center;
-    background-size: auto, contain;
-  }
+  //   @include media(tablet-l) {
+  //     background-position: center right, center;
+  //     background-size: auto, contain;
+  //   }
 
-  padding: $g-section-xl 0 $g-section;
+  //   padding: $g-section-xl 0 $g-section;
   position: relative;
 
   &__navbar {
@@ -35,6 +35,6 @@
   }
 
   @include media(tablet-l) {
-    padding: $g-section-xl 0 $g-section-l;
+    // padding: $g-section-xl 0 $g-section-l;
   }
 }
