@@ -1,8 +1,13 @@
 .btn {
   &--outline {
+    background: $light;
     border: 3px solid $primary-dark;
     border-radius: 30px;
     padding: 0.8rem 1.5rem;
+
+    @include media(tablet-l) {
+      padding: 1rem, 1.7rem;
+    }
   }
 
   &:hover {

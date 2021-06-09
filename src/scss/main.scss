@@ -1,11 +1,21 @@
-@import "./abstract/mixings";
+// Abstract Imports (Vairbales, mixins, viewport breakpoints, animations)
+@import "./abstract/mixins";
 @import "./abstract/animations";
 @import "./abstract/variables";
+@import "./abstract/breakpoints";
+
+// base styles
 @import "./base/base";
 @import "./base/typography";
+
+// components
 @import "./components/btn.scss";
+@import "./components/video";
 @import "./layout/navbar";
 @import "./components/burger-btn.scss";
+
+// layout sections
+@import "./layout/header";
 @import "./layout/hero.scss";
 @import "./layout/main-content";
 @import "./layout/footer";

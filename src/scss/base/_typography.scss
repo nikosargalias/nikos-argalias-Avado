@@ -1,4 +1,12 @@
+// @font-face {
+//   font-family: "fieldwork-geo";
+//   src: url("../../assets/fonts/FontsFree-Net-Fieldwork-Geo-Fat-Demo.ttf")
+//       format("truetype"),
+//     url("../../assets/fonts/Fieldwork-Hum-Hair-Demo\ 265.otf") format("otf");
+// }
+
 body {
+  font-family: fieldwork, sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
   font-weight: 400;

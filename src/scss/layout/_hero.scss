@@ -1,20 +1,21 @@
 .hero {
   @include container();
-  padding: $p2;
+  padding: $g-elem;
   border-radius: 20px;
   background: white;
   display: flex;
   flex-direction: column;
+  box-shadow: $box-shadow-dark;
 
   &__heading {
-    margin-bottom: $m2;
+    margin-bottom: $g-elem;
   }
 
   &__body {
-    margin-bottom: $m2;
+    margin-bottom: $g-elem;
   }
 
-  @media (min-width: 900px) {
+  @include media(tablet-l) {
     flex-direction: row;
 
     &__video {

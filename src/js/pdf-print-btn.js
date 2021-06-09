@@ -1,7 +1,7 @@
-const printBtn = document.getElementById("print-btn");
+window.addEventListener("DOMContentLoaded", (event) => {
+  const printBtn = document.getElementById("print-btn");
 
-// printBtn.onclick = window.print;
-
-printBtn.addEventListener("click", () => {
-  window.print();
+  printBtn.addEventListener("click", () => {
+    window.print();
+  });
 });

@@ -2,6 +2,11 @@ html {
   font-size: 62.5%;
   // This makes 1rem = 10px, making it easier to set exact pizel sizes with responsive units when needed.
   scroll-behavior: smooth;
+
+  // This will increase the font and padding size slightly for dekstop screen lasrger the 21.5inches.
+  @include media(desktop) {
+    font-size: 75%;
+  }
 }
 
 html,
@@ -14,51 +19,20 @@ html,
   // this gives you complete custom control of the width of your elements without needing to calculate width+padding+border
 }
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 img {
   max-width: 100%;
   object-fit: cover;
 }
 
-video {
-  min-width: 0;
-  max-width: 100%;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-.header {
-  background-image: url("../../assets/pngs/top-bg.png");
-  background-size: contain;
-  padding: $p10 0 $g-section;
-  position: relative;
-
-  &__navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: $p5 0;
-    z-index: 10;
-    transition: $transition-med;
-
-    &--hide {
-      transform: translateY(-200px);
-    }
-
-    &--visible-scrolled {
-      transform: translateY(0);
-      background: rgba(#343438, 0.8);
-    }
-
-    @media (min-width: 900px) {
-      padding: 0;
-    }
-  }
-
-  @media (min-width: 900px) {
-    padding: $g-section-xl 0 $g-section-l;
-  }
-
-  &__hero {
-  }
+button {
+  color: inherit;
+  border: inherit;
+  outline: inherit;
+  font-size: inherit;
+  background: inherit;
 }

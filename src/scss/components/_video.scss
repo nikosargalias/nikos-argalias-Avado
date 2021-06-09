@@ -1,0 +1,21 @@
+.video {
+  position: relative;
+  @include center;
+
+  video {
+    min-width: 0;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  &__btn {
+    position: absolute;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    pointer-events: none;
+
+    &--hide {
+      display: none;
+    }
+  }
+}

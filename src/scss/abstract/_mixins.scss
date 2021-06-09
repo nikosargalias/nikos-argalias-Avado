@@ -9,3 +9,9 @@
   max-width: 85vw;
   margin: 0 auto;
 }
+
+@mixin media($viewport) {
+  @media screen and (min-width: map-get($breakpoints, $viewport)) {
+    @content;
+  }
+}

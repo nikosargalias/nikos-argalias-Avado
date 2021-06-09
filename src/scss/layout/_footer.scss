@@ -1,9 +1,10 @@
+
 .footer {
   background-color: $secondary-dark;
   color: white;
   padding: $g-section 0;
 
-  @media (min-width: 900px) {
+  @include media(tablet-l) {
     padding: $g-section-l 0;
   }
 

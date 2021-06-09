@@ -1,0 +1,40 @@
+.header {
+  background: url("../../assets/body-svgs/Emblem.png") no-repeat center left,
+    url("../../assets/pngs/top-bg.png") repeat center;
+  background-size: auto, cover;
+
+  @include media(tablet-l) {
+    background-position: center right, center;
+    background-size: auto, contain;
+  }
+
+  padding: $g-section-xl 0 $g-section;
+  position: relative;
+
+  &__navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5rem 0;
+    z-index: 10;
+    transition: $transition-med;
+
+    &--hide {
+      transform: translateY(-200px);
+    }
+
+    &--visible-scrolled {
+      transform: translateY(0);
+      background: rgba(#343438, 0.8);
+    }
+
+    @include media(tablet-l) {
+      padding: 0;
+    }
+  }
+
+  @include media(tablet-l) {
+    padding: $g-section-xl 0 $g-section-l;
+  }
+}
