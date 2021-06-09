@@ -5,9 +5,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
   const mainNav = document.getElementById("main-nav");
   const overlay = document.getElementById("navbar__dark-overlay");
 
-  burgerBtn.addEventListener("keypress", (e) => {
-    if (e.keyCode === 32 || e.key === "Enter") showNavMenu();
-  });
   burgerBtn.onclick = showNavMenu;
   window.onresize = closeMobileMenu;
 

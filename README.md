@@ -4,6 +4,8 @@
 
 In the root directory, you will find a, dist/ and src/ folder, inside dist/ you will find the distribution bundles which were processed by Webpack. In order to view the finished project, please load the index.html file from the dist/ folder (not the src/ folder).
 
+* Please note, I would usually add the dist folder in .gitignore, but for the purposes of allowing you access to the dist index.html, I kept the latest build in the repository.
+
 ## How to view the Source code
 
 In the src/ folder you will find all of the source code files prior to Webpack processing.
@@ -56,7 +58,8 @@ I realise everything I've done here might be a bit overkill for a single landing
 
 I ensured that the size of all the icons, and margin and padding of all the sections and elements were as close as possible to the design that was provided. For the purposes of this design I made the spacing consistent, even though on the prototype, each section seemed to have slightly different margins applied. In a real work environment I would double check with the designers if the margins were intended to be different from section to section.
 
-I also ensure to focus on accesibilty as much as possible. For example, I made sure the div that makes up the burger button has the attributes - tabindex="0" aria-label="Main menu" role="button" aria-expanded="false". I am then making sure it is responding to 'spacebar and enter' keypress with Javascript and that the aria-expanded attribute switches to true when the menu opens. 
+I also ensure to focus on accesibilty as much as possible. For example, I made sure the button element that makes up the burger button has the attributes -  aria-controls="main-nav" aria-haspopup="true"  aria-expanded="false". I am then making sure that the aria-expanded attribute switches to true when the menu opens. I also added the appropriate aria attributes to the main-nav and the nav links. 
 
 ### Why I didn't use Bootstrap and jQuery?
 I realise you use Bootstrap at Avado, however I wanted to showcase my knowledge and ability to produce something with custom css and maintainable architecture. In addition, I demonstrated a project I recebntly built using Bootstrap to David and Bec during my first interview.
+

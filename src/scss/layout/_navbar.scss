@@ -116,7 +116,9 @@
     }
   }
 
+  // This class is applied when the menu burger btn is clicked
   &--visible {
+    // display: initial;
     transform: translateX(0);
   }
 

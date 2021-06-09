@@ -16,18 +16,18 @@
         <div class="navbar">
 
           <!-- This is the burger button on mobile view (hidden in largre viewports) -->
-          <div id="burger-btn" class="burger-btn" tabindex="0" aria-label="Main menu" role="button" aria-expanded="false">
+          <button id="burger-btn" class="burger-btn"  aria-controls="main-nav" aria-haspopup="true" aria-expanded="false">
             <span class="burger-btn__lines"></span>
-          </div>
+          </button>
 
           <!-- Dark Overlay (hidden in largre viewports) -->
           <div id="navbar__dark-overlay" class="navbar__dark-overlay"></div>
 
-        <!-- main-nav icons (pop out in mobile view, hidden in largre viewport -->
-          <nav id="main-nav" class="main-nav" aria-label="Main menu">
+          <!-- main-nav icons (pop out in mobile view, hidden in largre viewport -->
+          <nav aria-labelledby="burger-btn" id="main-nav" class="main-nav" aria-label="Main menu">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--home">
-                <a href="#" class="main-nav__link"
+                <a href="#" role="menuitem" class="main-nav__link"
                   ><img
                     src="./assets/menu-svgs/btn-home.svg"
                     alt=""
@@ -35,7 +35,7 @@
                 /></a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link"
+                <a href="#" role="menuitem" class="main-nav__link"
                   ><img
                     src="./assets/menu-svgs/btn1.svg"
                     alt=""
@@ -45,7 +45,7 @@
                 >
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link"
+                <a href="#" role="menuitem" class="main-nav__link"
                   ><img
                     src="./assets/menu-svgs/btn2.svg"
                     alt=""
@@ -55,7 +55,7 @@
                 >
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link"
+                <a href="#" role="menuitem" class="main-nav__link"
                   ><img
                     src="./assets/menu-svgs/btn3.svg"
                     alt=""
@@ -65,7 +65,7 @@
                 >
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link"
+                <a href="#" role="menuitem" class="main-nav__link"
                   ><img
                     src="./assets/menu-svgs/btn4.svg"
                     alt=""
@@ -75,7 +75,7 @@
                 >
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link"
+                <a href="#" role="menuitem" class="main-nav__link"
                   ><img
                     src="./assets/menu-svgs/btn5.svg"
                     alt=""
