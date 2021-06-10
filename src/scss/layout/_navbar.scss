@@ -114,6 +114,10 @@
     &:active {
       transform: scale(0.98);
     }
+    &:focus {
+      outline: 2px solid $primary-dark;
+      outline-offset: 5px;
+    }
   }
 
   // This class is applied when the menu burger btn is clicked
