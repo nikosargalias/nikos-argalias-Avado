@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
   }
 
-  // sets tab index to -1 to prevent links from being tabable
+  // sets tabindex to -1 to prevent links from being tabable
   function removeLinksTabIndex() {
     menuLinks.forEach((link) => {
       link.setAttribute("tabindex", "-1");
