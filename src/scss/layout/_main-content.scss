@@ -21,15 +21,11 @@
   &__icons {
     display: grid;
     grid-auto-flow: column;
-    column-gap: 1rem;
     align-items: center;
-
-    // 500px is the max width of the image in the mock up that was sent via adobeXD
+    column-gap: 1rem;
     width: 100%;
 
     &--single {
-      // justify-items: center;
-
       // based on the design that was provided, there was exactly 70px of space between this image and the heading below it, hence why this property decleration overwrites the default element spacing which is set on line 14.
       margin-bottom: $g-elem-xl !important;
     }
@@ -38,14 +34,11 @@
       justify-content: space-between;
       max-width: 400px;
       margin: 0 auto;
-
-      @include media(mobile-xl) {
-        // justify-content: space-around;
-      }
     }
   }
 
   &__icon {
+    // 500px is the max width of the image in the mock up that was sent via adobeXD
     max-width: 500px;
     width: 100%;
     margin: 0 auto;
@@ -62,7 +55,8 @@
     }
 
     &:focus {
-      outline: none;
+      outline: 2px solid $primary-dark;
+      outline-offset: 5px;
     }
   }
 
