@@ -1,14 +1,16 @@
 import mediaQ from "./media-query";
 
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", () => {
   const burgerBtn = document.getElementById("burger-btn");
   const mainNav = document.getElementById("main-nav");
   const overlay = document.getElementById("navbar__dark-overlay");
   const menuLinks = document.querySelectorAll(".main-nav__link");
 
-  removeLinksTabIndex();
   burgerBtn.onclick = showNavMenu;
   window.onresize = closeMobileMenu;
+
+  // calling function to add tabindex="-1" if loaded on mobile view where menu is hidden
+  toggleTabIndex();
 
   // this manages the state of tabindex on menu links (tab index needs to be -1 when mobile menu is hidden so that it cannot be tabbed, however it needs to be tabable when menu is visible)
   function toggleTabIndex() {
