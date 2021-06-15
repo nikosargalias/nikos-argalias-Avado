@@ -30,6 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
   function removeLinksTabIndex() {
     menuLinks.forEach((link) => {
       link.setAttribute("tabindex", "-1");
+      link.setAttribute("aria-hidden", "true");
     });
   }
 
@@ -37,6 +38,7 @@ window.addEventListener("DOMContentLoaded", () => {
   function addLinksTabIndex() {
     menuLinks.forEach((link) => {
       link.setAttribute("tabindex", "0");
+      link.removeAttribute("aria-hidden");
     });
   }
 
